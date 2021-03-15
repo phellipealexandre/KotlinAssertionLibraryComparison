@@ -39,9 +39,9 @@ Lib | Popularity | Documentation | Performance | Fluency | Customizability | Typ
 **AssertJ** | [![star this repo](https://img.shields.io/github/stars/assertj/assertj-core.svg)](https://github.com/assertj/assertj-core) | ✅ | ❌| ✅| ✅| Wrap (can chain)
 **AssertK** | [![star this repo](https://img.shields.io/github/stars/willowtreeapps/assertk.svg)](https://github.com/willowtreeapps/assertk) | ✅ | ✅| ✅| ✅| Wrap (can chain)
 **Atrium** | [![star this repo](https://img.shields.io/github/stars/robstoll/atrium.svg)](https://github.com/robstoll/atrium) | ✅ | ❌| ❌| ✅| Wrap (can chain)
-**Expekt** | [![star this repo](https://img.shields.io/github/stars/winterbe/expekt.svg)](https://github.com/winterbe/expekt) | ❌ | ✅| ❌| ❌| Extension (can chain)
-**Kluent** | [![star this repo](https://img.shields.io/github/stars/MarkusAmshove/Kluent.svg)](https://github.com/MarkusAmshove/Kluent) | ❌ | ✅| ✅| ✅| Extension (can chain/infix)
-**Kotest** | [![star this repo](https://img.shields.io/github/stars/kotest/kotest.svg)`*`](https://github.com/kotest/kotest) | ✅ | ⚠️| ✅| ✅| Extension (can chain/infix)
+**Expekt** | [![star this repo](https://img.shields.io/github/stars/winterbe/expekt.svg)](https://github.com/winterbe/expekt) | ❌ | ✅| ❌| ❌| Extend (can chain)
+**Kluent** | [![star this repo](https://img.shields.io/github/stars/MarkusAmshove/Kluent.svg)](https://github.com/MarkusAmshove/Kluent) | ❌ | ✅| ✅| ✅| Extend (can chain/infix)
+**Kotest** | [![star this repo](https://img.shields.io/github/stars/kotest/kotest.svg)`*`](https://github.com/kotest/kotest) | ✅ | ⚠️| ✅| ✅| Extend (can chain/infix)
 **Strikt** | [![star this repo](https://img.shields.io/github/stars/robfletcher/strikt.svg)](https://github.com/robfletcher/strikt) | ❌ | ❌| ✅| ✅| Wrap (can chain)
 
 `*` This lib is part of a bigger library
