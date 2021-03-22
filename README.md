@@ -24,7 +24,7 @@ Some of the criteria can be biased on personal subjectiveness and understanding.
 - [Atrium](https://github.com/robstoll/atrium)
 - [Expekt](https://github.com/winterbe/expekt)
 - [Kluent](https://github.com/MarkusAmshove/Kluent)
-- [Kotent assertion](https://github.com/kotest/kotest)
+- [Kotest assertion](https://github.com/kotest/kotest)
 - [Strikt](https://github.com/robfletcher/strikt)
 
 ### Result
@@ -34,7 +34,7 @@ Lib | Popularity | Documentation | Performance | Fluency | Customizability | Typ
 **JUnit** | [![star this repo](https://img.shields.io/github/stars/junit-team/junit.svg)`*`](https://github.com/junit-team/junit4) | ✅ | ✅| ❌| ❌| Match
 **Kotlin JUnit** | [![star this repo](https://img.shields.io/github/stars/JetBrains/kotlin.svg)`*`](https://github.com/JetBrains/kotlin/tree/master/libraries/kotlin.test) | ✅ | ✅| ❌| ❌| Match
 **Hamcrest** | [![star this repo](https://img.shields.io/github/stars/hamcrest/JavaHamcrest.svg)](https://github.com/hamcrest/JavaHamcrest) | ✅ | ⚠️| ❌| ✅| Match
-**Hamkrest** | [![star this repo](https://img.shields.io/github/stars/npryce/hamkrest.svg)](https://github.com/npryce/hamkrest) | ❌ | ⚠️| ❌| ✅| Match
+**Hamkrest** | [![star this repo](https://img.shields.io/github/stars/npryce/hamkrest.svg)](https://github.com/npryce/hamkrest) | ❌ | ⚠️| ✅| ✅| Match
 **Google Truth** | [![star this repo](https://img.shields.io/github/stars/google/truth.svg)](https://github.com/google/truth) | ✅ | ⚠️| ❌| ✅| Wrap
 **AssertJ** | [![star this repo](https://img.shields.io/github/stars/assertj/assertj-core.svg)](https://github.com/assertj/assertj-core) | ✅ | ❌| ✅| ✅| Wrap (can chain)
 **AssertK** | [![star this repo](https://img.shields.io/github/stars/willowtreeapps/assertk.svg)](https://github.com/willowtreeapps/assertk) | ✅ | ✅| ✅| ✅| Wrap (can chain)

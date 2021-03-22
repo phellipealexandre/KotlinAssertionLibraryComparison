@@ -10,6 +10,7 @@ import kotlin.reflect.KClass
 class MapperHamkrestTest {
 
     private val instanceOfMatcher = Matcher(this::instanceOf)
+    private val hasValueMatcher = Matcher(this::hasValue)
 
     @Test
     fun `Process list without favorites to plain list without headers in alphabetical order`() {
@@ -78,23 +79,27 @@ class MapperHamkrestTest {
 
         assertThat(
             listRepresentation.processedItems,
-            containsExactlyTypes(
-                instanceOfMatcher(ProcessedItem.Header::class),
-                instanceOfMatcher(ProcessedItem.SelectableItem::class),
-                instanceOfMatcher(ProcessedItem.Header::class),
-                instanceOfMatcher(ProcessedItem.SelectableItem::class)
+            containsExactly(
+                instanceOfMatcher(ProcessedItem.Header::class) and hasValueMatcher("Favorites"),
+                instanceOfMatcher(ProcessedItem.SelectableItem::class) and hasValueMatcher("C"),
+                instanceOfMatcher(ProcessedItem.Header::class) and hasValueMatcher("Non-Favorites"),
+                instanceOfMatcher(ProcessedItem.SelectableItem::class) and hasValueMatcher("B")
             )
         )
     }
 
     private fun instanceOf(p: ProcessedItem, clazz: KClass<*>): Boolean = clazz.isInstance(p)
+    private fun hasValue(p: ProcessedItem, value: String): Boolean = p.value == value
 
-    private fun <T> containsExactlyTypes(vararg typeMatchers: Matcher<T>) = object : Matcher.Primitive<Iterable<T>>() {
+
+    private fun <T> containsExactly(vararg matchers: Matcher<T>) = object : Matcher.Primitive<Iterable<T>>() {
         override fun invoke(actual: Iterable<T>): MatchResult {
-            if (typeMatchers.size != actual.toList().size) return MatchResult.Mismatch("Error")
+            if (matchers.size != actual.toList().size) return MatchResult.Mismatch("Different Sizes")
 
             actual.forEachIndexed { index, t ->
-                if (typeMatchers[index].invoke(t) != MatchResult.Match) return MatchResult.Mismatch("Error")
+                if (matchers[index].invoke(t) != MatchResult.Match) return MatchResult.Mismatch(
+                    "Error on index $index and item $t"
+                )
             }
 
             return MatchResult.Match
