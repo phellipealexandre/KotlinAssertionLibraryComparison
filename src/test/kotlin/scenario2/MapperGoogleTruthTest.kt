@@ -92,18 +92,11 @@ class MapperGoogleTruthTest {
 
         val listRepresentation = Mapper.processItems(rawItems)
 
-        ProcessedItemsSubject.assertThat(listRepresentation.processedItems).containsExactlyTypes(
-            ProcessedItem.Header::class.java,
-            ProcessedItem.SelectableItem::class.java,
-            ProcessedItem.Header::class.java,
-            ProcessedItem.SelectableItem::class.java
-        )
-
-        assertThat(listRepresentation.processedItems.map(ProcessedItem::value)).containsExactly(
-            "Favorites",
-            "C",
-            "Non-Favorites",
-            "B"
+        ProcessedItemsSubject.assertThat(listRepresentation.processedItems).containsExactlyTypesWithValues(
+            ProcessedItem.Header::class.java to "Favorites",
+            ProcessedItem.SelectableItem::class.java to "C",
+            ProcessedItem.Header::class.java to "Non-Favorites",
+            ProcessedItem.SelectableItem::class.java to "B"
         )
     }
 }
@@ -128,6 +121,15 @@ class ProcessedItemsSubject internal constructor(
 
         items.forEachIndexed { index, processedItem ->
             assertThat(processedItem).isInstanceOf(classTypes[index])
+        }
+    }
+
+    fun containsExactlyTypesWithValues(vararg typesWithValues: Pair<Class<*>, String>) {
+        assertThat(typesWithValues.size).isEqualTo(items.size)
+
+        items.forEachIndexed { index, processedItem ->
+            assertThat(processedItem).isInstanceOf(typesWithValues[index].first)
+            assertThat(processedItem.value).isEqualTo(typesWithValues[index].second)
         }
     }
 }
