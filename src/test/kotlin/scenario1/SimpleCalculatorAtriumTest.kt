@@ -14,7 +14,6 @@ class SimpleCalculatorAtriumTest {
 
         expect(sum) {
             toBe(4)
-            isGreaterThan(3)
         }
     }
 }

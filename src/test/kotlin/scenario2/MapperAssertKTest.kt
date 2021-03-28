@@ -112,13 +112,14 @@ class MapperAssertKTest {
     }
 
     private fun Assert<List<ProcessedItem>>.containsExactlyTypes(vararg classTypes: Class<*>): Assert<List<ProcessedItem>> {
-        this.given { list ->
+        given { list ->
             assertThat(list.size).isEqualTo(classTypes.size)
 
             list.forEachIndexed { index, processedItem ->
                 assertThat(processedItem).isInstanceOf(classTypes[index])
             }
         }
+
         return this
     }
 }

@@ -89,8 +89,8 @@ class MapperHamkrestTest {
     }
 
     private fun instanceOf(p: ProcessedItem, clazz: KClass<*>): Boolean = clazz.isInstance(p)
-    private fun hasValue(p: ProcessedItem, value: String): Boolean = p.value == value
 
+    private fun hasValue(p: ProcessedItem, value: String): Boolean = p.value == value
 
     private fun <T> containsExactly(vararg matchers: Matcher<T>) = object : Matcher.Primitive<Iterable<T>>() {
         override fun invoke(actual: Iterable<T>): MatchResult {
@@ -104,7 +104,6 @@ class MapperHamkrestTest {
 
             return MatchResult.Match
         }
-
 
         override val description: String get() = "description"
         override val negatedDescription: String get() = "negated"

@@ -44,7 +44,7 @@ class ViewModelAtriumTest {
         viewModel.viewState.test {
             viewModel.fetchUsers()
 
-            expect(expectItem()).feature({ f(it::isLoading) }) { toBe(true) }
+            expect(expectItem().isLoading) { toBe(true) }
             expect(expectItem()) {
                 toBe(
                     ViewState(

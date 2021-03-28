@@ -117,7 +117,6 @@ class MapperAssertJTest {
             element(index).isInstanceOf(clazz)
         }
 
-
         return this
     }
 }

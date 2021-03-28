@@ -6,6 +6,9 @@ import org.junit.Test
 import scenario2.processed.ProcessedItem
 import scenario2.raw.RawItem
 
+/*
+ * Difficult to perform customization
+ */
 class MapperJUnitTest {
 
     @Test

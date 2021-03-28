@@ -4,7 +4,6 @@ import app.cash.turbine.test
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.assertj.core.api.Assertions.assertThat
-import org.assertj.core.api.ListAssert
 import org.junit.Test
 import scenario3.repository.FakeRepository
 import kotlin.time.ExperimentalTime

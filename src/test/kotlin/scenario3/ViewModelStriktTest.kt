@@ -42,8 +42,8 @@ class ViewModelStriktTest {
         viewModel.viewState.test {
             viewModel.fetchUsers()
 
-            expectThat(subject = expectItem().isLoading).isTrue()
-            expectThat(subject = expectItem()).isEqualTo(
+            expectThat(expectItem().isLoading).isTrue()
+            expectThat(expectItem()).isEqualTo(
                 ViewState(
                     isLoading = false,
                     showError = true,
