@@ -7,7 +7,7 @@ assertion libraries we have available today. A comparison was conducted based on
 - **Fluency / Kotlin idiomatic**: Readability and Kotlin-like style.
 - **Customizability**: If it could be customized easily.
 
-Some of the criteria can be biased on personal subjectiveness and understanding. The results reflect my own opinion.
+Some of the criteria in this report can be biased on my personal subjectiveness and understanding. The results reflect my own opinion and analysis.
 
 ### Types of assertion
 
@@ -28,6 +28,12 @@ Some of the criteria can be biased on personal subjectiveness and understanding.
 - [Kluent](https://github.com/MarkusAmshove/Kluent)
 - [Kotest assertion](https://github.com/kotest/kotest)
 - [Strikt](https://github.com/robfletcher/strikt)
+
+### Scenarios
+All libraries were tested under a set of scenarios. You can find all of them in this codebase:
+- **Scenario 1**: Perform assertion on a simple integer sum.
+- **Scenario 2**: Perform a complex list assertion validating instance type, value and order.
+- **Scenario 3**: Perform assertion on a ViewState element simulating an Android ViewModel with coroutines. 
 
 ### Result Matchers
 
@@ -68,3 +74,10 @@ Lib | Popularity | Documentation | Performance | Fluency | Customizability | Typ
 🏆 Great Lib.
 
 🏅 Good but use it with caution.
+
+### Further improvements
+I still need to figure out a better way to evaluate the performance of those libraries. My strategy was:
+- Run all tests under the same scenarios.
+- Run all tests under the same hardware.
+- Run all tests multiple times to get a mean result.
+- Use profiling tools to analyse the time taken.
