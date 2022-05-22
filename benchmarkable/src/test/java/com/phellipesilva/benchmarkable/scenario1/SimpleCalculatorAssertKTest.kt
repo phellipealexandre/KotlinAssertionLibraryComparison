@@ -3,7 +3,6 @@ package com.phellipesilva.benchmarkable.scenario1
 import assertk.all
 import assertk.assertThat
 import assertk.assertions.isEqualTo
-import com.phellipesilva.benchmarkable.scenario1.SimpleCalculator
 import org.junit.Test
 
 class SimpleCalculatorAssertKTest {
