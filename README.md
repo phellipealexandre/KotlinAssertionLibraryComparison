@@ -125,7 +125,7 @@ Lib | Popularity | Documentation | Performance | Fluency | Customizability | KMM
 --- | --- | --- | --- | --- | --- | --- 
 **#1 Kotest 🏆** | [![star this repo](https://img.shields.io/github/stars/kotest/kotest.svg)`*`](https://github.com/kotest/kotest) | ✅ | ⚠️| ✅| ✅| ✅
 **#2 Kluent 🏆** | [![star this repo](https://img.shields.io/github/stars/MarkusAmshove/Kluent.svg)](https://github.com/MarkusAmshove/Kluent) | ❌ | ⚠️| ✅| ✅| ✅
-**#3 Expekt 🏅** | [![star this repo](https://img.shields.io/github/stars/winterbe/expekt.svg)](https://github.com/winterbe/expekt) | ❌ | ✅| ❌| ❌| ❌
+**#3 Expekt 🏅** | [![star this repo](https://img.shields.io/github/stars/winterbe/expekt.svg)](https://github.com/winterbe/expekt) | ❌ | ⚠️| ❌| ❌| ❌
 
 ### Notes
 `*` This lib is part of a bigger library
