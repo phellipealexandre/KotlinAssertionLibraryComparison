@@ -10,3 +10,4 @@ rootProject.name = "AndroidKotlinAssertionLibraries"
 include ':app'
 include ':assertionbenchmark'
 include ':benchmarkable'
+include ':multiplatform'
