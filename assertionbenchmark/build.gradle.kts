@@ -67,5 +67,5 @@ dependencies {
     androidTestImplementation("com.natpryce:hamkrest:1.8.0.1")
     androidTestImplementation("com.winterbe:expekt:0.5.0")
     androidTestImplementation("com.willowtreeapps.assertk:assertk:0.25")
-
+    androidTestImplementation("com.varabyte.truthish:truthish:0.6.3")
 }

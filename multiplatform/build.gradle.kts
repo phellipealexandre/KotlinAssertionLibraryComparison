@@ -37,6 +37,7 @@ kotlin {
                 implementation("com.natpryce:hamkrest:1.8.0.1")
                 implementation("com.winterbe:expekt:0.5.0")
                 implementation("com.willowtreeapps.assertk:assertk:0.25")
+                implementation("com.varabyte.truthish:truthish-js:0.6.3")
             }
         }
         val androidMain by getting

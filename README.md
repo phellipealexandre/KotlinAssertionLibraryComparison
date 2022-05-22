@@ -28,6 +28,7 @@ Some of the criteria in this report can be biased on my personal subjectiveness 
 - [Kluent](https://github.com/MarkusAmshove/Kluent)
 - [Kotest assertion](https://github.com/kotest/kotest)
 - [Strikt](https://github.com/robfletcher/strikt)
+- [Truthish](https://github.com/varabyte/truthish)
 
 ### Scenarios
 All libraries were tested under a set of scenarios. You can find all of them in this codebase:
@@ -47,6 +48,7 @@ Lib | test 1 (number assertion)
 **Kotlin JUnit** | 3.0 ns - 0 allocs
 **Hamcrest** | 15.3 ns - 2 allocs
 **Hamkrest** | 17.4 ns - 2 allocs
+**Truthish** | 17.7 ns - 2 allocs
 **Kotest** | 26.4 ns - 1 allocs
 **Expekt** | 82.0 ns - 5 allocs
 **AssertJ** | 104 ns - 6 allocs
@@ -64,6 +66,7 @@ Lib | Test 1 (remove) | Test 2 (favorite only) | test 3 (no favorite) | test 4 (
 **AssertK** | 1,668 ns - 72 allocs | 1,540 ns - 64 allocs | 1,026 ns - 41 allocs | 1,955 ns - 83 allocs
 **Google Truth** | 2,443 ns - 112 allocs | 2,435 ns - 108 allocs | 1,107 ns -  43 allocs | 2,587 ns - 114 allocs
 **Expekt** | 3,608 ns - 115 allocs | 3,427 ns - 107 allocs | 1,325 ns -  50 allocs | 4,841 ns - 146 allocs
+**Truthish** | 4,720 ns - 73 allocs | 4,579 ns - 65 allocs | 4,424 ns - 55 allocs | 8,103 ns - 95 allocs
 **Atrium** | 1,472 ns - 73 allocs | 23,952 ns - 858 allocs | 8,498 ns - 306 allocs | 34,618 ns - 1212 allocs
 **Kluent** | 19,087 ns - 287 allocs | 18,010 ns - 278 allocs | 1,552 ns - 50 allocs | 28,013 ns - 402 allocs
 **AssertJ** | 20,920 ns - 558 allocs | 20,822 ns - 550 allocs | 6,378 ns - 246 allocs | 29,909 ns - 791 allocs
@@ -86,6 +89,7 @@ Lib | Test 1 (success) | Test 2 (error)
 **Kotlin JUnit** | 235 ns - 8 allocs | 110 ns - 4 allocs
 **Google Truth** | 407 ns - 17 allocs | 271 ns - 13 allocs
 **Kotest** | 436 ns - 7 allocs | 326 ns - 3 allocs
+**Truthish** | 551 ns - 9 allocs | 214 ns - 5 allocs
 **Strikt** | 542 ns - 32 allocs | 452 ns - 28 allocs
 **Expekt** | 1,007 ns - 33 allocs | 657 ns - 21 allocs
 **AssertJ** | 304 ns - 14 allocs | 2,674 ns - 76 allocs
@@ -110,9 +114,10 @@ Lib | Popularity | Documentation | Performance | Fluency | Customizability | KMM
 --- | --- | --- | --- | --- | --- | --- 
 **#1 AssertK 🏆** | [![star this repo](https://img.shields.io/github/stars/willowtreeapps/assertk.svg)](https://github.com/willowtreeapps/assertk) | ✅ | ✅| ✅| ✅| ✅
 **#2 Google Truth 🏆** | [![star this repo](https://img.shields.io/github/stars/google/truth.svg)](https://github.com/google/truth) | ✅ | ✅️| ❌| ✅| ❌
-**#3 AssertJ 🏆** | [![star this repo](https://img.shields.io/github/stars/assertj/assertj-core.svg)](https://github.com/assertj/assertj-core) | ✅ | ❌| ✅| ✅| ❌
-**#4 Atrium 🏅** | [![star this repo](https://img.shields.io/github/stars/robstoll/atrium.svg)](https://github.com/robstoll/atrium) | ✅ | ❌| ❌| ✅| ✅
-**#5 Strikt 🏅** | [![star this repo](https://img.shields.io/github/stars/robfletcher/strikt.svg)](https://github.com/robfletcher/strikt) | ❌ | ❌| ✅| ✅| ❌
+**#3 Truthish 🏅** | [![star this repo](https://img.shields.io/github/stars/robfletcher/strikt.svg)](https://github.com/varabyte/truthish) | ❌ | ⚠️| ✅| ✅| ✅
+**#4 AssertJ 🏅** | [![star this repo](https://img.shields.io/github/stars/assertj/assertj-core.svg)](https://github.com/assertj/assertj-core) | ✅ | ❌| ✅| ✅| ❌
+**#5 Atrium 🏅** | [![star this repo](https://img.shields.io/github/stars/robstoll/atrium.svg)](https://github.com/robstoll/atrium) | ✅ | ❌| ❌| ✅| ✅
+**#6 Strikt 🏅** | [![star this repo](https://img.shields.io/github/stars/robfletcher/strikt.svg)](https://github.com/robfletcher/strikt) | ❌ | ❌| ✅| ✅| ❌
 
 ### Result Extenders
 

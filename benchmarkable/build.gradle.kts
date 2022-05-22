@@ -52,6 +52,7 @@ dependencies {
     testImplementation("com.natpryce:hamkrest:1.8.0.1")
     testImplementation("com.winterbe:expekt:0.5.0")
     testImplementation("com.willowtreeapps.assertk:assertk:0.25")
+    testImplementation("com.varabyte.truthish:truthish:0.6.3")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1")
     testImplementation("app.cash.turbine:turbine:0.8.0")
 
