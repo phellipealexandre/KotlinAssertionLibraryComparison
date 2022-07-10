@@ -3,9 +3,10 @@ The purpose of this repository is to serve as a case study for the various Kotli
 assertion libraries we have available today. A comparison was conducted based on the following criteria:
 - **Popularity**: Based on GitHub stars and time of creation.
 - **Documentation**: Quality of material found on how to use and how to customize the library.
-- **Speed**: Time added to execute an unit-test assertion compared to other libraries.
+- **Performance**: Time added to execute an unit-test assertion compared to other libraries.
 - **Fluency / Kotlin idiomatic**: Readability and Kotlin-like style.
 - **Customizability**: If it could be customized easily.
+- **Kotlin Multi Platform**: If it could be used in KMM projects.
 
 Some of the criteria in this report can be biased on my personal subjectiveness and understanding. The results reflect my own opinion and analysis.
 
