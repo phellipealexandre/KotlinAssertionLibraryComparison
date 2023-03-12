@@ -43,38 +43,38 @@ Performance was measured using the [Android Micro Benchmark](https://developer.a
 library. For each scenario, the test configuration and action are the same, the only thing that changes is the assertion.
 
 ### Scenario 1 - Simple assert equals
-Lib | test 1 (number assertion)
+Lib | test 1 (sum)
 --- | ---
-**JUnit** | 2.9 ns - 0 allocs
-**Kotlin JUnit** | 3.0 ns - 0 allocs
-**Hamcrest** | 15.3 ns - 2 allocs
-**Hamkrest** | 17.4 ns - 2 allocs
-**Truthish** | 17.7 ns - 2 allocs
-**Kotest** | 26.4 ns - 1 allocs
-**Expekt** | 82.0 ns - 5 allocs
-**AssertJ** | 104 ns - 6 allocs
-**AssertK** | 117 ns - 6 allocs
-**Google Truth** | 128 ns - 6 allocs
-**Kluent** | 147 ns - 4 allocs
-**Atrium** | 388 ns - 17 allocs
-**Strikt** | 1,259 ns - 37 allocs
+**JUnit** | 2.9 ns
+**Kotlin JUnit** | 2.9 ns
+**Truthish** | 14.8 ns
+**Hamcrest** | 15.5 ns
+**Hamkrest** | 18.5 ns
+**Kotest** | 22.6 ns
+**AssertJ** | 96.2 ns
+**Expekt** | 100 ns
+**AssertK** | 115 ns
+**Google Truth** | 124 ns
+**Kluent** | 150 ns
+**Atrium** | 390 ns
+**Strikt** | 1,250 ns
 
 ### Scenario 2 - Complex list assertion
 Lib | Test 1 (remove) | Test 2 (favorite only) | test 3 (no favorite) | test 4 (favorite and non-favorite)
---- | --- | --- | --- | ---
-**JUnit** | 994 ns - 45 allocs | 878 ns - 37 allocs | 783 ns - 30 allocs | 1,075 ns - 50 allocs
-**Kotlin JUnit** | 1,211 ns - 53 allocs | 1,072 ns - 45 allocs | 975 ns - 35 allocs | 1,417 ns - 62 allocs
-**AssertK** | 1,668 ns - 72 allocs | 1,540 ns - 64 allocs | 1,026 ns - 41 allocs | 1,955 ns - 83 allocs
-**Google Truth** | 2,443 ns - 112 allocs | 2,435 ns - 108 allocs | 1,107 ns -  43 allocs | 2,587 ns - 114 allocs
-**Expekt** | 3,608 ns - 115 allocs | 3,427 ns - 107 allocs | 1,325 ns -  50 allocs | 4,841 ns - 146 allocs
-**Truthish** | 4,720 ns - 73 allocs | 4,579 ns - 65 allocs | 4,424 ns - 55 allocs | 8,103 ns - 95 allocs
-**Atrium** | 1,472 ns - 73 allocs | 23,952 ns - 858 allocs | 8,498 ns - 306 allocs | 34,618 ns - 1212 allocs
-**Kluent** | 19,087 ns - 287 allocs | 18,010 ns - 278 allocs | 1,552 ns - 50 allocs | 28,013 ns - 402 allocs
-**AssertJ** | 20,920 ns - 558 allocs | 20,822 ns - 550 allocs | 6,378 ns - 246 allocs | 29,909 ns - 791 allocs
-**Kotest** | 38,969 ns - 663 allocs | 39,137 ns - 653 allocs | 38,209 ns - 638 allocs | 53,083 ns - 892 allocs
-**Strikt** | 49,244 ns - 606 allocs | 48,000 ns - 598 allocs | 47,268 ns - 581 allocs | 50,931 ns - 666 allocs 
-**Hamkrest** | 3,815,845 ns - 15997 allocs | 2,385,221 ns - 10074 allocs | 2,328,379 ns - 9643 allocs | 3,334,597 ns - 14147 allocs
-**Hamcrest** | N/A | N/A | N/A | N/A
+--- |-----------------|------------------------|----------------------| ---
+**JUnit** | 988 ns          | 852 ns                 | 770 ns               | 1,113 ns
+**Kotlin JUnit** | 1,142 ns        | 1,011 ns               | 933 ns               | 1,348 ns
+**Truthish** | 1,462 ns        | 1,486 ns               | 1,331 ns             | 2,482 ns
+**AssertK** | 1,658 ns        | 1,533 ns               | 1,050 ns             | 1,919 ns
+**Google Truth** | 2,382 ns        | 2,371 ns               | 1,081 ns             | 2,428 ns
+**Expekt** | 3,507 ns        | 3,361 ns               | 1,342 ns             | 4,725 ns
+**Atrium** | 1,393 ns        | 24,086 ns              | 7,712 ns             | 34,373 ns
+**AssertJ** | 11,545 ns       | 11,273 ns              | 6,333 ns             | 15,429
+**Kluent** | 18,990 ns       | 17,689 ns              | 1,551 ns             | 27,798 ns
+**Kotest** | 37,103 ns       | 32,497 ns              | 36,240 ns            | 49,885 ns
+**Strikt** | 47,405 ns       | 47,209 ns              | 45,645 ns            | 49,009 ns 
+**Hamkrest** | 3,783,240 ns    | 2,385,701 ns           | 2,297,980 ns         | 3,294,005 ns
+**Hamcrest** | N/A             | N/A                    | N/A                  | N/A
 
 Note: Had troubles setting up latest hamcrest version on instrumented tests as it has conflicts with some
 androidx test dependencies. Using the contains() method didn't work and trying to resolve the conflicts 
@@ -82,20 +82,20 @@ didn't work either
 
 ### Scenario 3 - Assertion with coroutines
 Lib | Test 1 (success) | Test 2 (error)
---- | --- | ---
-**JUnit** | 155 ns - 5 allocs | 22.7 ns - 1 allocs
-**Hamcrest** | 181 ns - 7 allocs | 60.7 ns - 3 allocs
-**Hamkrest** | 195 ns - 8 allocs | 75.5 ns - 4 allocs
-**AssertK** | 213 ns - 11 allocs | 108 ns -  7 allocs
-**Kotlin JUnit** | 235 ns - 8 allocs | 110 ns - 4 allocs
-**Google Truth** | 407 ns - 17 allocs | 271 ns - 13 allocs
-**Kotest** | 436 ns - 7 allocs | 326 ns - 3 allocs
-**Truthish** | 551 ns - 9 allocs | 214 ns - 5 allocs
-**Strikt** | 542 ns - 32 allocs | 452 ns - 28 allocs
-**Expekt** | 1,007 ns - 33 allocs | 657 ns - 21 allocs
-**AssertJ** | 304 ns - 14 allocs | 2,674 ns - 76 allocs
-**Kluent** | 1,538 ns - 34 allocs | 1,150 ns - 22 allocs
-**Atrium** | 3,725 ns  - 149 allocs | 1,903 ns  - 75 allocs
+--- |------------------| ---
+**JUnit** | 157 ns           | 23 ns
+**Hamcrest** | 179 ns           | 61.8 ns
+**Hamkrest** | 191 ns           | 79.6 ns
+**AssertK** | 224 ns           | 98.3 ns
+**Kotlin JUnit** | 235 ns           | 108 ns
+**Google Truth** | 430 ns           | 247 ns
+**Kotest** | 479 ns           | 326 ns
+**Truthish** | 551 ns           | 214 ns
+**Strikt** | 551 ns           | 452 ns
+**Expekt** | 973 ns           | 685 ns
+**AssertJ** | 271 ns           | 2,903 ns
+**Kluent** | 1,555 ns         | 1,188 ns
+**Atrium** | 4,432 ns         | 1,846 ns
 
 Note: Had trouble setting a benchmark that launches a coroutine (runTest). Did a slightly different
 setup here just benchmarking the assertion and not the whole test
@@ -115,7 +115,7 @@ Lib | Popularity | Documentation | Performance | Fluency | Customizability | KMM
 --- | --- | --- | --- | --- | --- | --- 
 **#1 AssertK 🏆** | [![star this repo](https://img.shields.io/github/stars/willowtreeapps/assertk.svg)](https://github.com/willowtreeapps/assertk) | ✅ | ✅| ✅| ✅| ✅
 **#2 Google Truth 🏆** | [![star this repo](https://img.shields.io/github/stars/google/truth.svg)](https://github.com/google/truth) | ✅ | ✅️| ❌| ✅| ❌
-**#3 Truthish 🏅** | [![star this repo](https://img.shields.io/github/stars/robfletcher/strikt.svg)](https://github.com/varabyte/truthish) | ❌ | ⚠️| ❌| ✅| ✅
+**#3 Truthish 🏅** | [![star this repo](https://img.shields.io/github/stars/varabyte/truthish.svg)](https://github.com/varabyte/truthish) | ❌ | ⚠️| ❌| ✅| ✅
 **#4 AssertJ 🏅** | [![star this repo](https://img.shields.io/github/stars/assertj/assertj-core.svg)](https://github.com/assertj/assertj-core) | ✅ | ❌| ✅| ✅| ❌
 **#5 Atrium 🏅** | [![star this repo](https://img.shields.io/github/stars/robstoll/atrium.svg)](https://github.com/robstoll/atrium) | ✅ | ❌| ❌| ✅| ✅
 **#6 Strikt 🏅** | [![star this repo](https://img.shields.io/github/stars/robfletcher/strikt.svg)](https://github.com/robfletcher/strikt) | ❌ | ❌| ✅| ✅| ❌
