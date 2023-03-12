@@ -123,10 +123,10 @@ class MapperKotestTest {
     private fun containsExactlyTypes(vararg elements: KClass<*>) = object : Matcher<List<ProcessedItem>> {
         override fun test(value: List<ProcessedItem>): MatcherResult {
             value.forEachIndexed { index, processedItem ->
-                if (!elements[index].isInstance(processedItem)) return MatcherResult(false, "", "")
+                if (!elements[index].isInstance(processedItem)) return MatcherResult(false, { "" }, { "" })
             }
 
-            return MatcherResult(true, "", "")
+            return MatcherResult(true, { "" }, { "" })
         }
     }
 }
