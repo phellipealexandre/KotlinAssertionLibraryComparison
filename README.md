@@ -1,4 +1,6 @@
 # Kotlin Assertion Library Comparison
+What is the best Kotlin assertion library? 
+
 The purpose of this repository is to serve as a case study for the various Kotlin
 assertion libraries we have available today. A comparison was conducted based on the following criteria:
 - **Popularity**: Based on GitHub stars and time of creation.
@@ -36,6 +38,21 @@ All libraries were tested under a set of scenarios. You can find all of them in 
 - **Scenario 1**: Perform assertion on a simple integer sum.
 - **Scenario 2**: Perform a complex list assertion validating instance type, value and order.
 - **Scenario 3**: Perform assertion on a ViewState element simulating an Android ViewModel with coroutines.
+
+# How to run the project
+If you wish to run the microbenchmark, with an emulator running use the following command:
+
+```
+./gradlew assertionbenchmark:connectedCheck --info
+```
+
+If you wish just to run the unit tests, use the following command:
+
+```
+./gradlew benchmarkable:testDebugUnitTest
+```
+
+Although you can run the tests on the terminal, the results are best seen when running in the IDE. 
 
 # Results
 ## Performance results
